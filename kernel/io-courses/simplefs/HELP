@@ -1,0 +1,7 @@
+ 2117  sudo insmod simplefs.ko 
+ 2118  cat /proc/filesystems 
+ 2124  dd if=/dev/zero of=image bs=1m count=16
+ 2126  ./mkfs-simplefs image 
+ 2128  mkdir d1
+ 2131  sudo mount -o loop -t simplefs image ./d1
+
